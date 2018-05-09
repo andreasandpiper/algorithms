@@ -11,6 +11,8 @@ end
 
 def mergeSort(left, right)
 	sorted = []
+	p left
+	p right
 	while !left.empty? && !right.empty?
 		if left[0] < right[0]
 			sorted.push(left.shift)

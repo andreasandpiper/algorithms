@@ -15,12 +15,8 @@ class BinarySearchTree {
 		if(array.length === 0){
 			return; 
 		}
-		var middle = parseInt(array.length/2);
+		this.root = buildTree(array);
 
-		this.root = new Node(array[middle]);
-		this.root.left = buildTree(array.slice(0, middle));
-		this.root.right = buildTree(array.slice(middle + 1));
-		
 		function buildTree(array){
 			if (array.length < 2){
 				return new Node(array[0]); 
@@ -90,7 +86,8 @@ BinarySearchTree.prototype.push = function(value){
 	
 }
 
-var values = [1,2, 3, 4]
+var values = [1,2, 3, 4,5,6,7]
 var tree = new BinarySearchTree(values);
-tree.push(5)
-tree.find(5)
+tree.push(8)
+console.log(tree.find(8))
+console.log(tree.find(9))
