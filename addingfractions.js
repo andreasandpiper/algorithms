@@ -1,4 +1,5 @@
 function GCD(num1, num2){
+	//this will exceed stack call if one of the numbers is prime
 	var maxNum = num1; 
 	var multiple = 2; 
 	
